@@ -15,8 +15,8 @@
 		@endif
 		
 		<div class="col-sm-12 col-m-3">
-			<div class="m__login">
-				<h2 class="m__login-header">Log in</h2>
+			<div class="m__userForm">
+				<h2 class="m__userForm-header">Log in</h2>
 				<form role="form" action="/signup" method="post">
 					<input type="hidden" name="_token" value="{{ csrf_token() }}">
 					<div class="form-group">
