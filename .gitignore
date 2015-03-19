@@ -9,4 +9,4 @@ Thumbs.db
 .sass-cache
 composer.lock
 /bootstrap/compiled.php
-
+*.codekit

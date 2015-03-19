@@ -1,0 +1,96 @@
+/* Base Layout */
+html
+	-webkit-text-size-adjust: 100%
+	-ms-text-size-adjust: 100%
+	-o-box-sizing: border-box
+	-webkit-box-sizing: border-box
+	box-sizing: border-box
+
+*
+	-o-box-sizing: inherit
+	-webkit-box-sizing: inherit
+	box-sizing: inherit
+	
+	&:before
+		-o-box-sizing: inherit
+		-webkit-box-sizing: inherit
+		box-sizing: inherit
+	&:after
+		-o-box-sizing: inherit
+		-webkit-box-sizing: inherit
+		box-sizing: inherit
+
+body
+	margin: 0
+	padding: 0
+	
+	background-color: $c--background
+
+	font-family: $base-font-style
+	font-size: $base-font-size
+	line-height: $base-line-height
+	-webkit-font-smoothing: antialiased
+	-webkit-text-size-adjust: 100%
+	
+	color: $c--text
+
+article,aside,details,figcaption,figure,footer,header,hgroup,nav,section,summary
+	display: block
+
+audio,canvas,video
+	display: inline-block
+
+
+h1
+	+heading-size($h1-font-size)
+
+h2
+	+heading-size($h2-font-size)
+
+h3
+	+heading-size($h3-font-size)
+
+h4
+	+heading-size($h4-font-size)
+
+a
+	text-decoration: none
+	color: $c--link
+
+	&:hover
+		text-decoration: none
+		color: darken($c--link, 10)
+
+	&:visited
+		text-decoration: none
+
+	&:focus
+		text-decoration: none
+
+	&:active
+		text-decoration: none
+
+ul, dl, ol, menu
+	margin: 0
+	padding: 0
+	list-style-type: none
+	overflow: hidden
+
+li
+	float: left
+
+	a
+		display: inline-block
+		padding: 10px
+
+form
+	width: 100%
+	margin: 0
+	padding: 0
+
+
+
+
+
+
+
