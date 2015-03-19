@@ -7,13 +7,13 @@ module.exports = function(grunt){
 					style:'compressed'
 				},
 				files:{
-					'public/media/css/style.css':'public/media/sass/style.scss'
+					'public/media/css/style.css':'public/media/sass/style.sass'
 				}
 			}
 		},
 		watch: {
 			css: {
-				files: ['public/media/sass/*.scss', 'public/media/sass/*/*.scss'],
+				files: ['public/media/sass/*.sass', 'public/media/sass/*/*.sass'],
 				tasks: ['sass']
 			},
 			tasks:{
