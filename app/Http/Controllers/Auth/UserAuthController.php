@@ -41,7 +41,7 @@ class UserAuthController extends Controller {
 	
 	public function redirectPath()
 	{
-		return '/home';
+		return '/user';
 	}
 
 }
