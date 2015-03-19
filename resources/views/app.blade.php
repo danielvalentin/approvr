@@ -17,7 +17,7 @@
 </head>
 <body>
 <div class="row" id="site-header">
-	<div class="container">
+	<div class="container-fluid">
 		<div class="col-xs-12">
 			<nav class="col-md-6" id="site-navigation">
 				<ul>
@@ -31,10 +31,13 @@
 					<input type="text" class="form-control">
 				</form>
 			</div>
+		</div>
+	</div>
+</div>
 <!-- end header !-->
 
 	<!-- main content !-->
-<div class="container">
+<div class="container-fluid">
 	<div class="row">
 		<div class="col-xs-12" id="site-body">
 			<div class="row">
@@ -133,7 +136,7 @@
 	
 <div class="row">
 	<div class="col-xs-12" id="site-footer">
-		<div class="container">
+		<div class="container-fluid">
 				Footer
 		</div>
 	</div>
