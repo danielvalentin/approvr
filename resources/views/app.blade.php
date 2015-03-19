@@ -17,7 +17,7 @@
 </head>
 <body>
 
-<div class="container">
+<div class="container-fluid">
 	<div class="row">
 		<div class="col-xs-12" id="site-header">
 			Header
