@@ -28,9 +28,37 @@
 		<div class="col-xs-12" id="site-body">
 			<div class="row">
 				<div class="col-xs-3" id="site-navigation">
-					Navigation
+					<ul class="nav nav-pills">
+						<?php if(Auth::check()): ?>
+							<div class="panel panel-default">
+								<div class="panel-heading">
+									<div class="row">
+										<div class="col-xs-7">
+											Your projects (0/5)
+										</div>
+										<div class="col-xs-5 text-right">
+											<a href="#" class="btn btn-xs btn-success">
+												<span class="glyphicon glyphicon-plus"></span>
+												New project
+											</a>
+										</div>
+									</div>
+								</div>
+								<div class="panel-body">
+									<em>None yet..</em>
+								</div>
+							</div>
+							<li>
+								<a href="<?php echo Site::route('user.logout'); ?>"><?php echo trans('buttons.logout'); ?></a>
+							</li>
+						<?php else: ?>
+							<li>
+								<a href="<?php echo Site::route('user.login'); ?>"><?php echo trans('buttons.login'); ?></a>
+							</li>
+						<?php endif; ?>
+					</ul>
 				</div>
-				<div class="col-xs-3" id="site-content">
+				<div class="col-xs-9" id="site-content">
 					@yield('content')
 				</div>
 			</div>
