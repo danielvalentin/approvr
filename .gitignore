@@ -1,0 +1,12 @@
+/vendor
+/node_modules
+.env
+public/media/css
+public/media/components
+.project
+.DS_Store
+Thumbs.db
+.sass-cache
+composer.lock
+/bootstrap/compiled.php
+
