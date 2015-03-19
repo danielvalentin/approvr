@@ -16,6 +16,7 @@
 	<![endif]-->
 </head>
 <body>
+<<<<<<< HEAD
 <div class="row" id="site-header">
 	<div class="container">
 		<div class="col-xs-12">
@@ -31,6 +32,13 @@
 					<input type="text" class="form-control">
 				</form>
 			</div>
+=======
+
+<div class="container-fluid">
+	<div class="row">
+		<div class="col-xs-12" id="site-header">
+			Header
+>>>>>>> 1436fdbe408a8d1d24b0faa952661f7e340e1786
 		</div>
 	</div>
 </div> <!-- end header !-->
