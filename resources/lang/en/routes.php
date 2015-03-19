@@ -10,5 +10,9 @@ return array(
 	),
 	'pages' => array(
 		
+	),
+	'projects' => array(
+		'prefix' => 'projects',
+		'new' => '/projects/new'
 	)
 );
