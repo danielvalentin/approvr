@@ -16,8 +16,8 @@
 	<![endif]-->
 </head>
 <body>
-<div class="row" id="site-header">
-	<div class="container-fluid">
+<div class="container-fluid" id="site-header">
+	<div class="row">
 		<div class="col-xs-12">
 			<nav class="col-md-6" id="site-navigation">
 				<ul>
@@ -134,9 +134,9 @@
 	
 </div> <!-- end container !-->
 	
-<div class="row">
+<div class="container-fluid">
 	<div class="col-xs-12" id="site-footer">
-		<div class="container-fluid">
+		<div class="row">
 				Footer
 		</div>
 	</div>
