@@ -12,25 +12,9 @@ class User extends Model implements AuthenticatableContract, CanResetPasswordCon
 
 	use Authenticatable, CanResetPassword;
 
-	/**
-	 * The database table used by the model.
-	 *
-	 * @var string
-	 */
 	protected $table = 'users';
-
-	/**
-	 * The attributes that are mass assignable.
-	 *
-	 * @var array
-	 */
 	protected $fillable = ['name', 'email', 'password'];
 
-	/**
-	 * The attributes excluded from the model's JSON form.
-	 *
-	 * @var array
-	 */
 	protected $hidden = ['password', 'remember_token'];
 	
 	public function subscription()
@@ -38,11 +22,21 @@ class User extends Model implements AuthenticatableContract, CanResetPasswordCon
 		return $this->hasOne('App\Http\Models\Subscription', 'users_subscriptions');
 	}
 	
+	public function clients()
+	{
+		return $this->hasMany('App\Http\Models\User', 'users_clients', 'user_id', 'client_id');
+	}
+	
 	public function roles()
 	{
 		return $this->belongsToMany('App\Http\Models\Role', 'users_roles');
 	}
 	
+	public function projects()
+	{
+		return $this->hasMany('App\Http\Models\Project');
+	}
+
 	public function hasRole($role = false)
 	{
 		if(!$role) return false;

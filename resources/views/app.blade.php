@@ -31,11 +31,15 @@
 							<div class="panel panel-default">
 								<div class="panel-heading">
 									<div class="row">
-										<div class="col-xs-7">
-											Your projects (0/5)
+										<div class="col-xs-6">
+<?php
+											$user = Auth::user();
+											$projects = $user->projects()->get();
+?>
+											Your projects (<?php echo $projects->count(); ?>/5)
 										</div>
-										<div class="col-xs-5 text-right">
-											<a href="#" class="btn btn-xs btn-success">
+										<div class="col-xs-6 text-right">
+											<a href="<?php echo Site::route('projects.new'); ?>" class="btn btn-xs btn-success">
 												<span class="glyphicon glyphicon-plus"></span>
 												New project
 											</a>
@@ -43,7 +47,23 @@
 									</div>
 								</div>
 								<div class="panel-body">
-									<em>None yet..</em>
+<?php
+									if((bool)$projects->count())
+									{
+										echo '<ul>';
+										foreach($projects as $project)
+										{
+											echo '<li>';
+											echo $project->link();
+											echo '</li>';
+										}
+										echo '</ul>';
+									}
+									else
+									{
+										echo '<em>None yet..!</em>';
+									}
+?>
 								</div>
 							</div>
 							<li>

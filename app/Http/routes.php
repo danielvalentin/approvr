@@ -40,3 +40,18 @@ Route::group(array('middleware' => 'auth'), function(){
 		'uses' => 'UserController@index'
 	));
 });
+Route::group(array('middleware' => 'user'), function(){
+	Route::match(['post', 'get'], trans('routes.projects.new'), array(
+		'as' => 'newProject',
+		'uses' => 'ProjectsController@newProject'
+	));
+	Route::group(array('prefix' => Site::route('projects.prefix')), function(){
+		Route::get('/', array(
+			'uses' => 'ProjectsController@index'
+		));
+		Route::get('/{id}', array(
+			'uses' => 'ProjectsController@single',
+			'middleware' => 'project'
+		))->where('id', '[0-9]');
+	});
+});
