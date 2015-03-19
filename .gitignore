@@ -10,3 +10,4 @@ Thumbs.db
 composer.lock
 /bootstrap/compiled.php
 *.codekit
+*.swp
