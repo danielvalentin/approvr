@@ -1,14 +1,16 @@
 /* Login Form CSS */
-.m__login
+.m__userForm
+	+drop-shadow(2)
 	border-radius: $border-radius
-	background: $c--background
+	background: #fff
+	border: 1px solid #e5d4c2
 	overflow: hidden
 
-.m__login-header
+.m__userForm-header
 	text-align: center
 	text-transform: uppercase
 
-.m__login-footer
+.m__userForm-footer
 	+display(flex)
 	width: 100%
 	margin-top: 20px
@@ -16,7 +18,7 @@
 	background: #f8f3f0
 	overflow: hidden
 
-.m__login-footerItem
+.m__userForm-footerItem
 	+flex(1)
 	+display(flex)
 	+align-items(center)
@@ -26,7 +28,7 @@
 		+flex-direction(row-reverse)
 		+align-items(flex-start)
 
-.m__login-register
+.m__userForm-register
 	padding: 10px
 	text-align: center
 	color: #fff
@@ -35,5 +37,5 @@
 	a
 		color: #fff
 
-.m__login-label
+.m__userForm-label
 	padding: 0 20px
