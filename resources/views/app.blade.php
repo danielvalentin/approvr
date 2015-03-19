@@ -16,13 +16,27 @@
 	<![endif]-->
 </head>
 <body>
-
-<div class="container">
-	<div class="row">
-		<div class="col-xs-12" id="site-header">
-			Header
+<div class="row" id="site-header">
+	<div class="container">
+		<div class="col-xs-12">
+			<nav class="col-md-6" id="site-navigation">
+				<ul>
+					<li><a href="#"><span class="glyphicon glyphicon-user"></span></a></li>
+					<li><a href="#"><span class="glyphicon glyphicon-signal"></span></a></li>
+					<li><a href="#"><span class="glyphicon glyphicon-cog"></span></a></li>
+				</ul>
+			</nav>
+			<div class="col-md-6">
+				<form action="#" class="navbar__search pull-right">
+					<input type="text" class="form-control">
+				</form>
+			</div>
 		</div>
 	</div>
+</div> <!-- end header !-->
+
+	<!-- main content !-->
+<div class="container">
 	<div class="row">
 		<div class="col-xs-12" id="site-body">
 			<div class="row">
@@ -63,13 +77,16 @@
 			</div>
 		</div>
 	</div>
-	<div class="row">
-		<div class="col-xs-12" id="site-footer">
-			Footer
+	
+</div> <!-- end container !-->
+	
+<div class="row">
+	<div class="col-xs-12" id="site-footer">
+		<div class="container">
+				Footer
 		</div>
 	</div>
 </div>
-	
 <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.1/js/bootstrap.min.js"></script>
 </body>
