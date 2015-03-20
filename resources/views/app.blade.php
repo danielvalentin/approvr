@@ -21,15 +21,34 @@
 		<div class="col-xs-12">
 			<nav class="col-md-6" id="site-navigation">
 				<ul>
-					<li><a href="#"><span class="glyphicon glyphicon-user"></span></a></li>
-					<li><a href="#"><span class="glyphicon glyphicon-signal"></span></a></li>
-					<li><a href="#"><span class="glyphicon glyphicon-cog"></span></a></li>
+					<li class="navigation__item">
+						<a href="#" class="navigation__link">
+							<span class="glyphicon glyphicon-user"></span> Users
+						</a>
+					</li>
+					<li class="navigation__item">
+						<a href="#" class="navigation__link">
+							<span class="glyphicon glyphicon-signal"></span> Stats
+						</a>
+					</li>
+
+					<li class="navigation__item">
+						<a href="#" class="navigation__link">
+							<span class="glyphicon glyphicon-plus"></span> Add
+						</a>
+					</li>
+
+					<li class="navigation__item">
+						<a href="#" class="navigation__link">
+							<span class="glyphicon glyphicon-cog"></span> Options
+						</a>
+					</li>
 				</ul>
 			</nav>
 			<div class="col-md-6">
-				<form action="#" class="navbar__search pull-right">
+				{{-- <form action="#" class="navbar__search pull-right">
 					<input type="text" class="form-control">
-				</form>
+				</form> --}}
 			</div>
 		</div>
 	</div>
@@ -39,28 +58,18 @@
 	<!-- main content !-->
 <div class="container-fluid" id="site-body">
 	<div class="row">
-		<div class="col-xs-3" id="site-navigation">
+		<div class="col-xs-3" id="app-navigation">
 			<ul class="nav nav-pills">
 				<?php if(Auth::check()): ?>
-					<div class="panel panel-default">
-						<div class="panel-heading">
-							<div class="row">
-								<div class="col-xs-6">
+					<div class="module">
+						<div class="module__header">
 <?php
 									$user = Auth::user();
 									$projects = $user->projects()->get();
 ?>
-									Your projects (<?php echo $projects->count(); ?>/5)
-								</div>
-								<div class="col-xs-6 text-right">
-									<a href="<?php echo Site::route('projects.new'); ?>" class="btn btn-xs btn-success">
-										<span class="glyphicon glyphicon-plus"></span>
-										New project
-									</a>
-								</div>
-							</div>
+									<h3>Your projects (<?php echo $projects->count(); ?>/5)</h3>
 						</div>
-						<div class="panel-body">
+						<div class="module__body">
 <?php
 							if((bool)$projects->count())
 							{
@@ -75,10 +84,15 @@
 							}
 							else
 							{
-								echo '<em>None yet..!</em>';
+								echo 'Not sure if project data should go here or something else? Maybe a list of the latest messages posted.';
+								echo '<p style="padding: 0 0 20px 0; border-bottom: 1px solid #7b6d5e;"><b>Client:</b> I really like what you did with the header.</p>';
+								echo '<p style="padding: 0 0 20px 0 border-bottom: 1px solid #7b6d5e;"><b>Client:</b> Please refine the edges on the logo.</p>';
 							}
-?>
-						</div>
+?>						
+					</div>
+					<div class="module__footer">
+						Doesn't have to be that. Just a thought.
+					</div>
 					</div>
 					<li>
 						<a href="<?php echo Site::route('user.logout'); ?>"><?php echo trans('buttons.logout'); ?></a>
@@ -87,35 +101,36 @@
 					<li>
 						<?php /* ZIS IZ VERE YOUR FORM STARTS! */ ?>
 						<div class="m__userForm">
-							<h2 class="m__userForm-header">Log in</h2>
+							<h2 class="module__header">Log in</h2>
 							<form role="form" action="<?php echo Site::route('user.login'); ?>" method="post" class="loginForm">
 								<input type="hidden" name="_token" value="{{ csrf_token() }}">
 								
-								<label for="email" class="m__userForm-label">Email</label>
+								<label for="email">Email</label>
 								<div class="input-group">
 									<span class="input-group-addon" id="basic-addon2"><span class="glyphicon glyphicon-user" aria-hidden="true"></span></span>
 									<input type="text" type="email" value="{{ old('email') }}" placeholder="<?php echo trans('forms.placeholders.email'); ?>" id="auth-email" name="email" class="form-control" aria-describedby="basic-addon2">
 								</div>
 								
-								<label for="password" class="m__userForm-label">Password</label>	
+								<label for="password">Password</label>	
 								<div class="input-group">
 									<span class="input-group-addon" id="basic-addon2"><span class="glyphicon glyphicon-lock" aria-hidden="true"></span></span>
 									<input type="password" id="auth-password" placeholder="<?php echo trans('forms.placeholders.password'); ?>" value="{{ old('email') }}"  name="password" class="form-control" aria-describedby="basic-addon2">
 								</div>
 
 
-								<div class="m__userForm-footer">
-									<div class="m__userForm-footerItem">
+								<footer class="module__footer">
+									<div class="module__footer-item">
 										<label>
 											<input type="checkbox" name="remember"<?php echo (old('remember')=='yes'?' checked="checked"':'') ?> value="yes" /> <?php echo trans('forms.labels.staylogged'); ?>
 										</label>
 									</div>
 
-									<div class="m__userForm-footerItem">
+									<div class="module__footer-item">
 										<button class="btn btn-primary"><?php echo trans('buttons.login'); ?></button>
 									</div>
-								</div> <!-- end m__footer !-->
-								<div class="m__userForm-register">
+								</footer> <!-- end m__footer !-->
+
+								<div class="module__subFooter">
 									<a href="<?php echo trans('routes.user.signup'); ?>" title="<?php echo trans('forms.login.signup'); ?>">Don't have an account?</a>
 								</div>
 							</form>

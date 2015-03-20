@@ -7,6 +7,9 @@
 	&:hover
 		border-color: #c44a28
 
+	&:first-child
+		margin-right: 0
+
 .btn-primary
 	@extend .btn
 	display: block
@@ -34,3 +37,9 @@
 	background: -ms-linear-gradient(top, rgb(237, 231, 230) 0%, rgb(233, 106, 70) 2%, rgb(228, 88, 53) 100%)
 	background: linear-gradient(to bottom, rgb(237, 231, 230) 0%, rgb(233, 106, 70) 2%, rgb(228, 88, 53) 100%)
 	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ede7e6', endColorstr='#e45835',GradientType=0 )
+
+.btn-success
+	background: $c--good
+
+	&:hover
+		background: darken($c--good, 10)

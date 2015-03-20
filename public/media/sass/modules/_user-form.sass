@@ -1,14 +1,8 @@
 /* Login Form CSS */
 .m__userForm
-	+drop-shadow(2)
-	border-radius: $border-radius
-	background: #fff
+	@extend .module
+	max-width: 365px
 	overflow: hidden
-	border: 1px solid #e5d4c2
-
-.m__userForm-header
-	text-align: center
-	text-transform: uppercase
 
 .m__userForm-footer
 	+display(flex)
@@ -39,6 +33,3 @@
 	a
 		color: #fff
 
-.m__userForm-label
-	padding: 0 20px
-	font-size: .77em

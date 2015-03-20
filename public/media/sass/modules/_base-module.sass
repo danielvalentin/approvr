@@ -1,0 +1,85 @@
+/* Site Header */
+.module
+	+display(block)
+	width: 100%
+	margin-bottom: 25px
+	background: #fff
+	border-radius: $border-radius
+	box-shadow: 0 0 12px rgba(58, 51, 46, 0.26)
+	position: relative
+	z-index: 0
+	overflow: hidden
+
+.module__header
+	margin-top: 35px
+	color: $c--text-dark
+	text-align: center
+	text-transform: uppercase
+
+.module__body
+	width: 100%
+	margin-top: 20px
+	padding: 0 10px
+	color: $c--text-dark
+
+.module__footer
+	+display(flex)
+	width: 100%
+	margin-top: 20px
+	padding: 20px 20px
+	background: #f8f3f0
+	color: $c--text-dark
+	overflow: hidden
+
+	&-item
+		+flex(1)
+		+display(flex)
+		+align-items(center)
+
+		&:nth-of-type(2)
+			+display(flex)
+			+flex-direction(row-reverse)
+			+align-items(flex-start)
+
+.module__subFooter
+	padding: 10px
+	text-align: center
+	color: #fff
+	background: #5e90af
+	border-bottom-left-radius: $border-radius
+	border-bottom-right-radius: $border-radius
+
+	a
+		color: #fff
+
+.module__meta
+	width: calc(100%+20px)
+	margin-top: 20px
+	margin-left: -10px
+	margin-right: -10px
+	margin-bottom: -10px
+
+.module__meta-item
+	width: 33.3%
+	background: #f5ede8
+	border-left: 1px solid #fff
+	font-size: 15px
+	line-height: 25px
+	font-weight: 700
+	color: #7b6d5e
+	text-align: center
+
+	&:hover
+		background: darken(#f5ede8, 10)
+
+	a
+		padding: 10px 5px
+		color: $c--text-dark
+		text-transform: uppercase
+
+		&:hover
+			color: $c--text-dark
+
+.module__meta-full
+	@extend .module__meta-item
+	width: 99.9%
