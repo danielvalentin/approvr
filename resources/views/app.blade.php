@@ -85,6 +85,7 @@
 					</li>
 				<?php else: ?>
 					<li>
+						<?php /* ZIS IZ VERE YOUR FORM STARTS! */ ?>
 						<div class="m__userForm">
 							<h2 class="m__userForm-header">Log in</h2>
 							<form role="form" action="<?php echo Site::route('user.login'); ?>" method="post" class="loginForm">
@@ -119,6 +120,7 @@
 								</div>
 							</form>
 						</div>
+						<?php /* ZIS IZ VERE YOUR FORM ENDS! */ ?>
 					</li>
 				<?php endif; ?>
 			</ul>
