@@ -4,8 +4,9 @@
 	width: 100%
 	margin-bottom: 25px
 	background: #fff
+	border: 1px solid $border-color
 	border-radius: $border-radius
-	box-shadow: 0 0 12px rgba(58, 51, 46, 0.26)
+	box-shadow: 0 5px 8px rgba(0,0,0,0.06)
 	position: relative
 	z-index: 0
 	overflow: hidden
@@ -27,7 +28,7 @@
 	width: 100%
 	margin-top: 20px
 	padding: 20px 20px
-	background: #f8f3f0
+	background: lighten($border-color, 5)
 	color: $c--text-dark
 	overflow: hidden
 
@@ -55,24 +56,28 @@
 .module__meta
 	width: calc(100%+20px)
 	margin-top: 20px
-	margin-left: -10px
+	margin-left: -11px
 	margin-right: -10px
-	margin-bottom: -10px
+
 
 .module__meta-item
 	width: 33.3%
-	background: #f5ede8
-	border-left: 1px solid #fff
+	background: #fff
+	border-top: 1px solid $border-color
+	border-left: 1px solid $border-color
 	font-size: 15px
 	line-height: 25px
 	font-weight: 700
 	color: #7b6d5e
 	text-align: center
+	border-bottom: 3px solid transparent
 
 	&:hover
-		background: darken(#f5ede8, 10)
+		background: transparent
+		border-bottom: 3px solid $c--good
 
 	a
+		display: block
 		padding: 10px 5px
 		color: $c--text-dark
 		text-transform: uppercase

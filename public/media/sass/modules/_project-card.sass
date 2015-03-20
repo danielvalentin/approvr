@@ -3,9 +3,14 @@
 	@extend .module
 	+display(flex)
 	+flex-direction(column)
-	padding: 10px
+	padding: 10px 10px 0 10px
 
 .projectCard__header
+	color: $c--text-dark
+	text-align: center
+	margin: $base-font-size 0 0
+
+.projectCard__icon
 	+flex(1)
 	width: 100%
 	min-height: 175px
