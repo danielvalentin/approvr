@@ -2,15 +2,6 @@
 
 @section('content')
 
-<!-- This is the top row that contains the new project / sorting view !-->
-<div class="row">
-	<div class="col-xs-12">
-		<a href="#" class="btn btn__sort btn-sm btn-default pull-right"><span class="glyphicon glyphicon-th"></span></a>
-		<a href="#" class="btn btn__sort btn-sm btn-default pull-right"><span class="glyphicon glyphicon-th-list"></span></a>
-	</div>
-
-</div>
-
 <!-- This is the second row that contains the current projects in only grid view for now !-->
 <ul class="row">
 	<li class="col-xs-12 col-sm-6 col-md-4">

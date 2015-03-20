@@ -63,6 +63,14 @@
 
 		<!-- main content !-->
 	<div class="container" id="site-body">
+
+		<!-- This is the top row that contains the new project / sorting view !-->
+		<div class="row">
+			<div class="col-xs-12">
+				<a href="#" class="btn btn__sort btn-sm btn-default pull-right"><span class="glyphicon glyphicon-th"></span></a>
+				<a href="#" class="btn btn__sort btn-sm btn-default pull-right"><span class="glyphicon glyphicon-th-list"></span></a>
+			</div>
+		</div>
 		<div class="row">
 			<div class="col-xs-12 col-md-3" id="app-navigation">
 					<?php if(Auth::check()): ?>
