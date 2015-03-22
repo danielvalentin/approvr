@@ -1,0 +1,33 @@
+/* Alerts */
+.alert
+	@extend .module
+	padding: 10px
+	width: 100%
+
+.alert-danger
+	background: #fef4f1
+	color: #f06c44
+	text-indent: 60px
+	border: 1px solid #fef4f1
+	overflow: visible
+
+	&:before
+		+position(absolute, 50% null null -64px)
+		+transform(translateY(-40%))
+		content: url(/media/images/warning-image.png)
+		display: block
+		float: left
+
+.alert-success
+	background: #f1fff8
+	color: #4daf7c
+	text-indent: 60px
+	border: 1px solid #f1fff8
+	overflow: visible
+
+	&:before
+		+position(absolute, 50% null null -64px)
+		+transform(translateY(-40%))
+		content: url(/media/images/success-image.png)
+		display: block
+		float: left
