@@ -98,13 +98,11 @@
 								else
 								{
 									echo 'Not sure if project data should go here or something else? Maybe a list of the latest messages posted.';
-									echo '<p style="padding: 0 0 20px 0; border-bottom: 1px solid #7b6d5e;"><b>Client:</b> I really like what you did with the header.</p>';
-									echo '<p style="padding: 0 0 20px 0 border-bottom: 1px solid #7b6d5e;"><b>Client:</b> Please refine the edges on the logo.</p>';
 								}
 	?>						
 						</div>
 						<div class="module__footer">
-							Doesn't have to be that. Just a thought.
+							Words
 						</div>
 						</div>
 							<a href="<?php echo Site::route('user.logout'); ?>"><?php echo trans('buttons.logout'); ?></a>
