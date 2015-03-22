@@ -39,7 +39,7 @@
 						</li>
 
 						<li class="navigation__item">
-							<a href="#" class="navigation__link">
+							<a href="<?php echo Site::route('projects.new'); ?>" class="navigation__link">
 								<span class="glyphicon glyphicon-plus"></span> Add
 							</a>
 						</li>
@@ -67,8 +67,7 @@
 		<!-- This is the top row that contains the new project / sorting view !-->
 		<div class="row">
 			<div class="col-xs-12">
-				<a href="#" class="btn btn__sort btn-sm btn-default pull-right"><span class="glyphicon glyphicon-th"></span></a>
-				<a href="#" class="btn btn__sort btn-sm btn-default pull-right"><span class="glyphicon glyphicon-th-list"></span></a>
+				<!-- Area for messages? !-->
 			</div>
 		</div>
 		<div class="row">

@@ -13,17 +13,22 @@
 		</div>
 	@endif
 	<form role="form" method="POST" action="<?php echo Site::route('projects.new'); ?>">
+
 		<input type="hidden" name="_token" value="{{ csrf_token() }}">
+		
+		<label for="project-name">Name</label>
 		<div class="form-group">
-			<label for="project-name">Name</label>
-			<input type="text" class="form-control" placeholder="Enter your projectname here" name="name">
+			<input type="text" class="form-control" placeholder="Project Title" name="name">
 		</div>
+
+		<label for="project-description">Description</label>
 		<div class="form-group">
-			<label for="project-description">Description</label>
-			<textarea name="description" id="project-description" class="form-control">{{ old('description') }}</textarea>
+			<textarea name="description" id="project-description" class="form-control" placeholder="Project Description">{{ old('description') }}</textarea>
 		</div>
+
 		<div class="form-group">
 			<button class="btn btn-primary">Create project</button>
 		</div>
+
 	</form>
 @endsection
